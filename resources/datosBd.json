@@ -1,0 +1,62 @@
+
+{
+    "asociacion" :
+    {
+        "-CIFAsociacion1":
+        {
+            "Nombre" : "Asociacion1",
+            "Telefono" : "956874125",
+            "Direccion" : "Madres Capuchinas, Cadiz",
+            "Latitud" : "36.46819746173722",
+            "Longitud" : "-6.199771800000008",
+            "Ocupacion" : "25",
+            "Capacidad" : "65",
+            "Valoracion" : "4,5",
+            "Email" : "Asociacion1@gmail.com",
+            "Web" : "www.google.com" 
+        },
+
+        "-CIFAsociacion2":
+        {
+            "Nombre" : "Asociacion2",
+            "Telefono" : "685471254",
+            "Direccion" : "Plaza Mina, Cadiz",
+            "Latitud" : "36.535269461765914",
+            "Longitud" : "-6.296888249999938",
+            "Ocupacion" : "55",
+            "Capacidad" : "241",
+            "Valoracion" : "2.5",
+            "Email" : "Asociacion2@gmail.com",
+            "Web" : "www.facebook.com" 
+        }
+    
+    },
+   
+
+    "clinica" :
+    {
+        "-CIFClinica1":
+        {
+            "Nombre" : "Clinica1",
+            "Telefono" : "674812674",
+            "Direccion" : "Av Pio, Sevilla",
+            "Latitud" : "37.40639741214418",
+            "Longitud" : "-5.977089299999989",
+            "Horario" : "10.00-13.30/17.00-19.00",
+            "Valoracion" : "4,5"
+        },
+
+        "-CIFClinica2":
+        {
+            "Nombre" : "Clinica2",
+            "Telefono" : "856789142",
+            "Direccion" : "Maria Auxiliadora, Cadiz",
+            "Latitud" : "36.51644891175785",
+            "Longitud" : "-6.283009300000003",
+            "Horario" : "10.30-13.30/17.00-20.00",
+            "Valoracion" : "3.5" 
+        }
+    
+    }
+   
+}

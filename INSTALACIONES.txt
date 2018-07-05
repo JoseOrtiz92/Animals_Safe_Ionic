@@ -1,0 +1,10 @@
+Necesario para traducir el boton back en iphone:
+npm install @ngx-translate/core @ngx-translate/http-loader --save
+
+Firebase para controlar palabras malsonantes:
+npm install -g firebase-tools
+
+Instalar native
+ionic cordova plugin add cordova-plugin-camera --save
+
+npm install --save @ionic-native/camera

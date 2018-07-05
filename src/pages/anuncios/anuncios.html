@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <!--<ion-buttons end>
+      <button ion-button small icon-only small (click)="linkPerfil()">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  -->
+    <ion-title text-center class="cabecera">
+      Animal´s Safe
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div *ngIf="ck.checkUs">  
+    <form [formGroup]="myForm" (ngSubmit)="addAnun(anuncio)">
+      <ion-list>
+        <ion-item>
+              <ion-icon name="paw" item-start></ion-icon>
+              <ion-label stacked>Nombre Mascota: </ion-label>
+              <ion-input formControlName="Nombre_mascota" [(ngModel)]="anuncio.Nombre_mascota" placeholder="Rocky" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="color-palette" item-start></ion-icon>
+              <ion-label stacked>Color: </ion-label>
+              <ion-input formControlName="Color" [(ngModel)]="anuncio.Color" placeholder="Negro" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="star" item-start></ion-icon>
+              <ion-label stacked>Tipo de Animal: </ion-label>
+              <ion-input formControlName="TipoAnimal" [(ngModel)]="anuncio.TipoAnimal" placeholder="Perro" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="star" item-start></ion-icon>
+              <ion-label stacked>Raza: </ion-label>
+              <ion-input formControlName="Raza" [(ngModel)]="anuncio.Raza" placeholder="Mestizo" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="calendar" item-start></ion-icon>
+              <ion-label stacked>Edad: </ion-label>
+              <ion-input formControlName="Edad" [(ngModel)]="anuncio.Edad" placeholder="3" type="number"></ion-input>
+        </ion-item>
+        <ion-row radio-group [(ngModel)]="anuncio.Genero" formControlName="Genero">
+              <ion-col col-6>
+                <ion-item>
+                  <ion-icon name="male" item-start></ion-icon>
+                  <ion-label class="genero">Macho</ion-label>
+                  <ion-radio value="1"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col col-6>
+                  <ion-item>
+                    <ion-icon name="female" item-start></ion-icon>
+                    <ion-label class="genero">Hembra</ion-label>
+                    <ion-radio value="2"></ion-radio>
+                  </ion-item>
+              </ion-col>
+        </ion-row>
+        <ion-item>
+          <ion-icon name="call" item-start></ion-icon>
+          <ion-label stacked>Telefono: </ion-label>
+          <ion-input formControlName="Telefono" [(ngModel)]="anuncio.Telefono" placeholder="656725048" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="map" item-start></ion-icon>
+              <ion-label stacked>Direccion de la perdida: </ion-label>
+              <ion-input formControlName="Direccion_perdida" [(ngModel)]="anuncio.Direccion_perdida" placeholder="C/Velazquez, Cadiz" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="map" item-start></ion-icon>
+              <ion-label stacked>Localidad de la perdida: </ion-label>
+              <ion-input formControlName="Localidad" [(ngModel)]="anuncio.Localidad" placeholder="Cádiz" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="map" item-start></ion-icon>
+              <ion-label stacked>Provincia de la perdida: </ion-label>
+              <ion-input formControlName="Provincia" [(ngModel)]="anuncio.Provincia" placeholder="Cádiz" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="help" item-start></ion-icon>
+              <ion-label stacked>Descripcion: </ion-label>
+              <ion-input formControlName="Descripcion" [(ngModel)]="anuncio.Descripcion" placeholder="Amigable, lleva collar rojo" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="image" item-start></ion-icon>
+              <button ion-button color='primary' (click)='takePicture()'>Seleccionar Foto</button>                     
+        </ion-item>
+        <ion-item>
+              <img src="{{ PreloadImage }}"/>
+        </ion-item>
+        
+        
+        <div padding>
+          <button ion-button block [disabled]="!myForm.valid" 
+            type="submit" >Subir Anuncio</button>
+        </div> 
+      </ion-list> 
+    </form>
+  </div>
+
+  <div *ngIf="!ck.checkUs">  
+    <div class="no-login">
+      <p>Solo los usuarios que hayan iniciado sesión pueden publicar anuncios.</p>
+      <p>Si no estás registrado, ¡Registrate!</p>
+      <button ion-button color="primary" (click)="linkRegister()">¡Registrate ya!</button>
+    </div>
+  </div>
+</ion-content>
+
+

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the DetailAnuncioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>{{anuncio.Nombre_mascota}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <img src="{{ URLImagen }}">        
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre: <ion-label><p>{{ anuncio.Nombre_mascota }}</p></ion-label></ion-label>        
+    </ion-item>
+    <ion-item>
+      <ion-label>Color: <ion-label><p>{{ anuncio.Color }}</p></ion-label></ion-label>        
+    </ion-item>
+    <ion-item>
+       <ion-label>Tipo de Animal:<ion-label><p>{{ anuncio.TipoAnimal }}</p></ion-label> </ion-label>        
+    </ion-item>
+    <ion-item>
+      <ion-label>Raza: <ion-label><p>{{ anuncio.Raza }}</p></ion-label></ion-label>        
+    </ion-item>
+    <ion-item>
+      <ion-label>Edad: <ion-label><p>{{ anuncio.Edad }}</p></ion-label></ion-label>        
+    </ion-item>
+    <ion-item>
+      <ion-label>Genero: <ion-label><p>{{ genero }}</p></ion-label></ion-label>        
+    </ion-item>
+    <ion-item>
+      <ion-label>Localizacion de la Perdida: <ion-label><p>{{ anuncio.Direccion_perdida }}, {{ anuncio.Localidad }}, {{ anuncio.Provincia }}.</p></ion-label></ion-label>        
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripcion: <ion-label><p>{{ anuncio.Descripcion }}</p></ion-label></ion-label>        
+    </ion-item>
+  </ion-list>
+
+</ion-content>

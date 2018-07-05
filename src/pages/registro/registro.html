@@ -1,0 +1,62 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>Registro de Usuario</ion-title>
+  </ion-navbar>  
+</ion-header> 
+  
+<ion-content padding>
+  <form [formGroup]="registroForm" (ngSubmit)="signin(usuario)"> 
+    <ion-list>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input [(ngModel)]="usuario.Email"
+          formControlName="Email"
+          type="text">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña:</ion-label>
+        <ion-input [(ngModel)]="usuario.Password"
+          formControlName="Password"
+          type="password">
+        </ion-input> 
+      </ion-item> 
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input [(ngModel)]="usuario.Nombre"
+        formControlName="Nombre"
+        type="text">
+        </ion-input> 
+        </ion-item> 
+      <ion-item>
+        <ion-label>Telefono:</ion-label>
+        <ion-input [(ngModel)]="usuario.Telefono"
+        formControlName="Telefono"
+        type="text">
+        </ion-input> 
+      </ion-item> 
+      <ion-item>
+        <ion-label>Direccion:</ion-label>
+        <ion-input [(ngModel)]="usuario.Direccion"
+        formControlName="Direccion"
+        type="text">
+        </ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-icon name="image" item-start></ion-icon>
+        <button ion-button type="button" color='primary' (click)='takePicture()'>Foto de Perfil</button>                     
+      </ion-item>
+      <ion-item>
+        <img src="{{ PreloadImage }}"/>
+      </ion-item>
+      
+      <div padding>
+        <button ion-button block [disabled]="!registroForm.valid"
+          type="submit" color="primary">
+            Registrate
+        </button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

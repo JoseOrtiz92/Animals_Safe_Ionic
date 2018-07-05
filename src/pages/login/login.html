@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>Login</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+  
+  
+<ion-content padding>
+  <div class="imgcenter">
+    <img  src="assets/imgs/logotwt.png"/>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="login(usuario)">
+    <ion-list>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input [(ngModel)]="userModel.Email"
+        formControlName="Email"
+        type="text"
+        required>
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Contraseña:</ion-label>
+          <ion-input [(ngModel)]="userModel.Password"
+          formControlName="Password"
+            type="password"
+            required>
+          </ion-input> 
+      </ion-item> 
+    
+      <ion-item>
+        <button ion-button type="submit" color="primary"
+        [disabled]="!loginForm.valid" block>
+        Login
+        </button>
+      </ion-item>
+    </ion-list>
+  </form>
+
+  <ion-label>Si no eres usuario, ¡Registrate!</ion-label>
+  <ion-item>
+    <button ion-button (click)="linkRegister()" type="submit" color="primary"
+     block>
+    Registrate
+    </button>
+  </ion-item>
+</ion-content>

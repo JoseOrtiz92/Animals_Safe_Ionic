@@ -1,0 +1,46 @@
+<!--
+  Generated template for the EditModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="primary">
+    <ion-buttons>
+      <button ion-button (click)="close_modal()" icon-only>
+        <ion-icon name="arrow-dropleft-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Editar perfil de usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Telefono</ion-label>
+      <ion-input type="text" [(ngModel)]="telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>    
+  </ion-list>
+
+  <button class="buttoncenter" ion-button round outline color="primary" (click)='update_data_user()'
+  [disabled]="(nombre==='' && telefono==='' && email==='' && direccion==='')">
+    Guardar cambios
+  </button>
+</ion-content>

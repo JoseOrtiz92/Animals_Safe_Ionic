@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>Perfil de Usuario</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-img class="imgcenter" src="{{ URLImagen }}">hola</ion-img>
+    
+    <ion-list *ngFor="let data of userData">
+      <ion-item>
+        <ion-label>Nombre:<ion-label><p>{{ data.Nombre }}</p></ion-label></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dirección:<ion-label><p>{{ data.Direccion }}</p></ion-label></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Telefono:<ion-label><p>{{ data.Telefono }}</p></ion-label></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email:<ion-label><p>{{ data.Email }}</p></ion-label></ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-item class="buttonAnuncio" detail-push navPush="AnunciosUsuarioPage">
+      <button class="publicAnouncement" ion-button round block>
+          Anuncios Publicados
+      </button>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-6>
+        <button ion-button round outline color="dark" class="buttoncenter" (click)="logout()"
+        type="submit" color="primary">Desconectate</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab top right>
+    <button ion-fab mini icon-only (click)="show_modal()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+  </ion-fab>
+  
+</ion-content>
